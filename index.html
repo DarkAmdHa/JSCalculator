@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Custom Feed Chart</h1>
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="None">Select Type</option>
+            <option value="DtL">Direct to Reservoir (g/Gal)</option>
+            <option value="conc">Stock Concentrate (mL/Gal)</option>
+        </select>
+        <table>
+            
+        </table>
+
+        <table id='main-table'>
+            
+            <tr class='main-table-row'>
+                <th colspan='2'></th>
+                <th colspan='3'>Veg Cycle</th>
+                <th colspan='9'>Flower Cycle</th>
+            </tr>
+            
+            <tr class='main-table-row'>
+                <td>Product</td>
+                <td>Units</td>
+                <td>1 Week</td>
+                <td>2 Week</td>
+                <td>3+ Week</td>
+                <td>1 Week</td>
+                <td>2 Week</td>
+                <td>3 Week</td>
+                <td>4 Week</td>
+                <td>Flush</td>
+                <td>5 Week</td>
+                <td>6 Week</td>
+                <td>7 Week</td>
+                <td>8+ Week</td>
+            </tr>
+            
+            <tr class='main-table-row'>
+                <td class='dotted'>EC Targets</td>
+                <td><span class='unit'>Grams</span> <span class='small'>per gallon</span></td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input veg1'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input veg2'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input veg3'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input flow1'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input flow2'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input flow3'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input flow4'></td></tr>
+                    </table>
+                </td>
+                <td rowspan="8" class='flush'>One-day Flush</td>
+               
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input flow5'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input flow6'></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="number" class='input flow7'></td></tr>
+                    </table>
+                </td>
+                <td rowspan="8" class='flush'>One-Week Flush</td>
+
+            </tr>
+
+            <tr class='main-table-row'>
+                <td class='dotted'>PART-A <br>
+                    <span class='part-a'>14-0-8</span>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td> <span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        </tr>
+                        <tr><td class='medium'>EC Contributed</td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output veg1_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg1_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output veg2_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg2_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output veg3_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output veg3_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output flow1_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow1_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output flow2_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow2_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output flow3_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output flow3_out2' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output flow4_out1' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+
+                
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr class='main-table-row'>
+                <td class='dotted'>PART-B <br>
+                    <span class='part-b'>2-13-17</span>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        </tr>
+                        <tr><td class='medium'>EC Contributed</td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+
+               
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+            </tr>
+            
+
+            <tr class='main-table-row'>
+                <td class='dotted'>Bloom <br>
+                    <span class='bloom'>0-35-29</span>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><span class='unit'>GRAMS</span><span class='small'>per gallon</span></td>
+                        </tr>
+                        <tr><td class='medium'>EC Contributed</td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+
+               
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='primary-output' disabled></td></tr>
+                        <tr><td><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            
+            <tr class='main-table-row'>
+                <td class='dotted'>Front-Row SI</td>
+                <td>ML <span class='small'>per gallon</span></td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+
+               
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results dotted'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+                <td class='week-1 results'>
+                    <table>
+                        <tr><td style='width: 80px;'><input type="text" class='secondary-output' disabled></td></tr>
+                    </table>
+                </td>
+            </tr>
+
+
+            <tr class='main-table-row'>
+                <td colspan="2">Total EC
+                </td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+            </tr>
+        
+        </table>
+    </div>
+    
+</body>
+</html>
