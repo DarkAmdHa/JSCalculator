@@ -1,4 +1,5 @@
 document.querySelector(".calculate_button").addEventListener('click', calculateValues);
+document.querySelector('.save-pdf').addEventListener('click', saveAsPDF);
 
 function calculateValues(e) {
     e.preventDefault();
@@ -424,4 +425,9 @@ function calculateValues(e) {
   {
       document.querySelector('.si_flow7').value = Number(0.5);
   }
+}
+
+function saveAsPDF(e){
+  var element = document.getElementById('main-table');
+  html2pdf(element);
 }
