@@ -428,6 +428,6 @@ function calculateValues(e) {
 }
 
 function saveAsPDF(e){
-  var element = document.getElementById('main-table');
-  html2pdf(element);
+  window.print();
+  e.preventDefault();
 }

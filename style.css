@@ -140,7 +140,8 @@ input {
   font-weight: bold;
 }
 
-.btn {
+.btn,
+.save-pdf {
   height: 34.3px;
   margin-left: 1rem;
   margin-top: 1rem;
@@ -155,4 +156,9 @@ input {
 
 .total-row {
   height: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
 }
