@@ -1,8 +1,9 @@
 document.querySelector(".calculate_button").addEventListener('click', calculateValues);
 document.querySelector('.save-pdf').addEventListener('click', saveAsPDF);
+document.addEventListener('DOMContentLoaded', calculateValues());
 
 function calculateValues(e) {
-    e.preventDefault();
+  
   const input = document.querySelectorAll('.input');
   const select = document.getElementById('type');
   const unit = document.querySelectorAll('.unit');
@@ -223,6 +224,9 @@ function calculateValues(e) {
 
       //the first 3 weeks need to be a conditionality
       //if input >= 3: output = regular_calc+1; else output = regular_calc
+      document.querySelector('.veg1_blm_out1').value = veg1_blm_g;
+      document.querySelector('.veg2_blm_out1').value = veg2_blm_g;
+      document.querySelector('.veg3_blm_out1').value = veg3_blm_g;
       if (input[3].value >= 3)
       {
           document.querySelector('.flow1_blm_out1').value = Math.ceil(flow1_blm_g/(667/3785))+1;

@@ -13,7 +13,7 @@
 <body>
     <h1>Custom Feed Chart</h1>
         <label for="type">Type:</label>
-        <select id="type" name="type">
+        <select id="type" name="type" onchange='calculateValues()'>
             <option value="DtL" selected>Direct to Reservoir (g/Gal)</option>
             <option value="conc">Stock Concentrate (mL/Gal)</option>
         </select>
@@ -22,8 +22,7 @@
 
         <table id='main-table'>
             <tr class='main-table-row input-row'>
-                <td class='dotted'>EC Targets</td>
-                <td><span class='unit'>Grams</span> <span class='small'>per gallon</span></td>
+                <td colspan="2">EC Targets</td>
                 <td class='week-1 results dotted'>
                     <table>
                         <tr><td style='width: 80px;'><input type="number" class='input veg1'></td></tr>
@@ -90,18 +89,18 @@
             <tr class='main-table-row'>
                 <td class='bold'>Product</td>
                 <td class='bold'>Units</td>
-                <td><span class='bold'>1</span><br> Week</td>
-                <td><span class='bold'>2</span><br> Week</td>
-                <td><span class='bold'>3+</span><br> Week</td>
-                <td><span class='bold'>1</span><br> Week</td>
-                <td><span class='bold'>2</span><br> Week</td>
-                <td><span class='bold'>3</span><br> Week</td>
-                <td><span class='bold'>4</span><br> Week</td>
+                <td><span class='bold-digit'>1</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>2</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>3+</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>1</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>2</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>3</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>4</span><br><span class='small bold'>Week</span></td>
                 <td><span class="small bold"> Flush</span></td>
-                <td><span class='bold'>5</span><br> Week</td>
-                <td><span class='bold'>6</span><br> Week</td>
-                <td><span class='bold'>7</span><br> Week</td>
-                <td><span class='bold'>8+</span><br> Week</td>
+                <td><span class='bold-digit'>5</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>6</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>7</span><br><span class='small bold'>Week</span></td>
+                <td><span class='bold-digit'>8+</span><br><span class='small bold'>Week</span></td>
             </tr>
             
             
