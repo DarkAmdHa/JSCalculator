@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #fff;
 }
 
 table {
@@ -14,14 +19,19 @@ table {
   margin-top: 1rem;
   margin-left: 1rem;
   border: 3px solid #333;
+  text-transform: uppercase;
 }
 
+.content {
+  display: flex;
+}
 #main-table > tbody > tr {
   border-bottom: 3px solid #333;
 }
 
 #main-table > tbody > tr > td {
   border-right: 3px solid #333;
+  padding: 0 0.5rem;
 }
 
 #main-table th {
@@ -78,6 +88,7 @@ input {
   color: white;
   writing-mode: vertical-rl;
   position: relative;
+  font-weight: bold;
 }
 
 .flush:before {
@@ -97,6 +108,14 @@ input {
   font-size: 0.9rem;
 }
 
+.one-day:before {
+  left: 12px;
+}
+
+.one-week:before {
+  left: 21px;
+}
+
 .part-a,
 .part-b,
 .bloom {
@@ -114,4 +133,25 @@ input {
 }
 .bloom {
   background: #bf2932;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn {
+  height: 34.3px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.greyed-out {
+  background: #808080;
+}
+
+.total-row {
+  height: 2.5rem;
 }
