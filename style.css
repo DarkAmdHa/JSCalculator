@@ -174,3 +174,7 @@ input {
 .input-row {
   height: 3rem;
 }
+
+#main-table > tbody > tr > td.results {
+  padding: 0;
+}
