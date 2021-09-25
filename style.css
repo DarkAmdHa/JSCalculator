@@ -113,7 +113,10 @@ input {
 }
 
 .one-week:before {
-  left: 21px;
+  left: 12px;
+}
+.flush p {
+  margin-bottom: 2rem;
 }
 
 .part-a,
