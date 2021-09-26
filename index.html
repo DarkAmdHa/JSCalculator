@@ -11,14 +11,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Custom Feed Chart</h1>
+    <div class="header">
+        <h1>Custom Feed Chart</h1>
         <label for="type">Type:</label>
         <select id="type" name="type" onchange='calculateValues()'>
             <option value="DtL" selected>Direct to Reservoir (g/Gal)</option>
             <option value="conc">Stock Concentrate (mL/Gal)</option>
         </select>
+    </div>
+    <table>
+        <tr class='main-table-row input-row'>
+            <td colspan="2">EC Targets</td>
+            <td class='week-1 results dotted'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input veg1' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='week-1 results dotted'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input veg2' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='week-1 results'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input veg3' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='week-1 results dotted'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input flow1' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='week-1 results dotted'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input flow2' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='week-1 results dotted'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input flow3' placeholder='0'></td></tr>
+                </table>
+            </td>
+
+            <td class='week-1 results'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input flow4' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='greyed-out'></td>
+
+           
+            <td class='week-1 results dotted'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input flow5' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='week-1 results dotted'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input flow6' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='week-1 results'>
+                <table>
+                    <tr><td style='width: 80px;'><input type="number" class='input flow7' placeholder='0'></td></tr>
+                </table>
+            </td>
+            <td class='greyed-out'></td>
+
+        </tr>
+    </table>
     <div class="content">
-        
+      
 
         <table id='main-table'>
             <tr class='main-table-row input-row'>
@@ -160,7 +223,7 @@
                     </table>
                 </td>
 
-                <td rowspan="8" class='flush one-day'><p>One-day Flush</p> </td>
+                <td rowspan="8" class='flush'><p>One-day Flush</p> </td>
                 
                 <td class='week-5 results dotted'>
                     <table>
@@ -180,7 +243,7 @@
                         <tr><td><input type="text" class='secondary-output flow7_pA_out2' disabled></td></tr>
                     </table>
                 </td>
-                <td rowspan="8" class='flush one-week'><p>One-Week Flush</p></td>
+                <td rowspan="8" class='flush'><p>One-Week Flush</p></td>
             </tr>
 
             <tr class='main-table-row'>
