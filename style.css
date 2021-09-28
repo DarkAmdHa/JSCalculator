@@ -46,6 +46,8 @@ table {
 input {
   text-align: center;
   outline: none;
+  -webkit-text-fill-color: rgba(0, 0, 0, 1);
+  -webkit-opacity: 1
 }
 
 .dotted {
