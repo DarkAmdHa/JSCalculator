@@ -38,7 +38,7 @@ function calculateValues(e) {
   let veg3_ptA_out2 = (input[2].value / 2) * (ptA_EC * ptA_veg);
   let flow1_ptA_out2 = (input[3].value / 2) * (ptA_EC * ptA_flow);
   let flow2_ptA_out2 = (input[4].value / 2) * (ptA_EC * ptA_flow);
-  let flow3_ptA_out2 = (input[5].value / 2) * (ptA_EC * ptA_flow);
+  let flow3_ptA_out2 = (input[5].value / 2) * (ptA_EC * ptA_flow * 0.95);
   let flow4_ptA_out2 = (input[6].value / 2) * (ptA_EC * ptA_flow * 0.95);
   let flow5_ptA_out2 = (input[7].value / 2) * (ptA_EC * ptA_flow * 0.95);
   let flow6_ptA_out2 = (input[8].value / 2) * (ptA_EC * ptA_flow * 0.9);
@@ -49,7 +49,7 @@ function calculateValues(e) {
   let veg3_ptB_out2 = (input[2].value / 2) * (ptB_EC * ptB_veg);
   let flow1_ptB_out2 = (input[3].value / 2) * (ptB_EC * ptB_flow);
   let flow2_ptB_out2 = (input[4].value / 2) * (ptB_EC * ptB_flow);
-  let flow3_ptB_out2 = (input[5].value / 2) * (ptB_EC * ptB_flow);
+  let flow3_ptB_out2 = (input[5].value / 2) * (ptB_EC * ptB_flow * 0.95);
   let flow4_ptB_out2 = (input[6].value / 2) * (ptB_EC * ptB_flow * 0.95);
   let flow5_ptB_out2 = (input[7].value / 2) * (ptB_EC * ptB_flow * 0.95);
   let flow6_ptB_out2 = (input[8].value / 2) * (ptB_EC * ptB_flow * 0.9);
@@ -60,7 +60,7 @@ function calculateValues(e) {
   let veg3_blm_out2 = 0;
   let flow1_blm_out2 = (input[3].value / 2) * (blm_EC * blm_flow * 0.95);
   let flow2_blm_out2 = (input[4].value / 2) * (blm_EC * blm_flow * 0.95);
-  let flow3_blm_out2 = (input[5].value / 2) * (blm_EC * blm_flow * 0.95);
+  let flow3_blm_out2 = (input[5].value / 2) * (blm_EC * blm_flow * 1.1);
   let flow4_blm_out2 = (input[6].value / 2) * (blm_EC * blm_flow * 1.1);
   let flow5_blm_out2 = (input[7].value / 2) * (blm_EC * blm_flow * 1.1);
   let flow6_blm_out2 = (input[8].value / 2) * (blm_EC * blm_flow * 1.15);
